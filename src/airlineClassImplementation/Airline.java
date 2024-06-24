@@ -157,70 +157,7 @@ public class Airline {
 		            System.out.println("Flight not found");
 		        }
 		    }
-/*	    
-	    public void addFlight(Flight flight) {
-	        flights[flightCount] = flight;
-	        flightCount++;
-	    }
 
-	    public void removeFlight(String flightNumber) {
-	    	for (int i = 0; i < flightCount; i++) {
-	            if (flights[i].getFlightNumber().equals(flightNumber)) {
-	                flights[i] = null;
-	                flightCount--;
-	                return;
-	            }
-	        }
-	    }
-
-	    public void registerPassenger(Passenger passenger) {
-	        passengers[passengerCount] =passenger;
-	        passengerCount++;
-	    }
-
-	    public void unregisterPassenger(String passportNumber) {
-	        for (int i = 0; i < passengerCount; i++) {
-	            if (passengers[i].getPassportNumber().equals(passportNumber)) {
-	                passengers[i] = null;
-	                passengerCount--;
-	                return;
-	            }
-	        }
-	    }
-
-	    public void bookFlight(String passportNumber, String flightNumber) {
-	        for (int i = 0; i < passengerCount; i++) {
-	            if (passengers[i].getPassportNumber().equals(passportNumber)) {
-	                for (int j = 0; j < flightCount; j++) {
-	                    if (flights[j].getFlightNumber().equals(flightNumber)) {
-	                        if (flights[j].isAvailable()) {
-	                            passengers[i].bookFlight(flights[j]);
-	                            flights[j].bookFlight();
-	                            return;
-	                        } else {
-	                            System.out.println("Flight is not available");
-	                            return;
-	                        }
-	                    }
-	                }
-	            }
-	        }
-	    }
-
-	    public void cancelBooking(String passportNumber, String flightNumber) {
-	        for (int i = 0; i < passengerCount; i++) {
-	            if (passengers[i].getPassportNumber().equals(passportNumber)) {
-	                for (int j = 0; j < flightCount; j++) {
-	                    if (flights[j].getFlightNumber().equals(flightNumber)) {
-	                        passengers[i].cancelBooking(flights[j]);
-	                        flights[j].cancelBooking();
-	                        return;
-	                    }
-	                }
-	            }
-	        }
-	    }
-*/
 	    public void listAvailableFlights() {
 	        for (int i = 0; i < flightCount; i++) {
 	            if (flights[i].isAvailable()) {
